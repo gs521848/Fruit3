@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="LoginBtn">点击任意位置进入游戏</string>
+    <string name="game_view_content_description">Game view</string>
+
+    <string name="cancel">拒绝</string>
+    <string name="ok">同意</string>
+
+    <!-- VIVO相关 -->
+    <string name="Channel">VIVO</string>
+    <string name="load_ad">加载广告</string>
+    <string name="load_p_ad">加载竖屏广告</string>
+    <string name="load_l_ad">加载横屏广告</string>
+    <string name="show_ad">展示广告</string>
+    <string name="load_ad_img">加载图片广告</string>
+    <string name="show_ad_img">展示图片广告</string>
+    <string name="load_ad_video">加载视频广告</string>
+    <string name="show_ad_video">展示视频广告</string>
+    <string name="switch_screen">切换横竖屏</string>
+    <string name="load_show_video">加载视频广告并展示</string>
+
+    <string name="str_splash">开屏广告</string>
+    <string name="str_banner">Banner广告</string>
+    <string name="str_interstitial">插屏广告</string>
+    <string name="str_native">原生广告</string>
+    <string name="str_reward_video">激励视频广告</string>
+    <string name="str_banner_new">新版Banner广告（建议）</string>
+    <string name="str_splash_new">新版开屏广告（建议）</string>
+    <string name="str_interstitial_new">新版插屏广告（建议）</string>
+    <string name="str_reward_video_new">新版激励视频广告（建议）</string>
+    <string name="str_exit_float">退出弹窗广告</string>
+    <string name="str_float_icon">原生Icon广告</string>
+    <string name="str_native_express">原生模板化广告</string>
+    <string name="str_config">动态配置</string>
+</resources>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.igame.xmtx.sndhj.vivo">
+
+
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+    <application>
+    <!--region TODO ===健康公告和VIVO权限===-->
+    <!--===安装包内各种活动页===-->
+    <!--隐私政策页-->
+    <activity android:name="com.protocol.ProtocolActivity"
+        android:screenOrientation="landscape">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+            <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+        </intent-filter>
+    </activity>
+        <activity android:name="com.SplashActivity"
+            android:screenOrientation="landscape"/>
+        <activity android:name="com.LoadSoActivity"
+            android:screenOrientation="landscape"/>
+        <!--===VIVO登陆相关权限===-->
+        <meta-data
+            android:name="vivo_union_sdk"
+            android:value="4.7.4.1" />
+        <!--vivo sdk的Activity-->
+        <activity
+            android:name="com.vivo.unionsdk.ui.UnionActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Dialog"
+            tools:ignore="AppLinkUrlError">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="union.vivo.com"
+                    android:path="/openjump"
+                    android:scheme="vivounion" />
+            </intent-filter>
+        </activity>
+        <!--===穿山甲相关权限===-->
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
+            android:authorities="${applicationId}.TTMultiProvider"
+            android:exported="false" />
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
+            android:authorities="${applicationId}.TTFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/gdt_file_path" />
+        </provider>
+
+        <!--endregion-->
+
+        <meta-data
+            android:name="unity.build-id"
+            android:value="6bb1e3be-577e-440c-b705-23b22006d09b" />
+        <meta-data
+            android:name="unity.splash-mode"
+            android:value="0" />
+        <meta-data
+            android:name="unity.splash-enable"
+            android:value="True" />
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+
+
+
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--此权限一定要加，否则下载类广告不会进入安装流程，影响后向体验-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- 如果接入了视频相关的广告, 请务必添加否则黑屏 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- targetVersion && Build.VERSION.SDK_INT >= Build.VERSION_CODES.R 需要单独声请此权限-->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <!--VIVO登陆SDK的一堆东西，我讨厌VIVO-->
+    <!--联运SDK跳转游戏中心-->
+    <uses-permission android:name="vivo.game.permission.OPEN_JUMP_INTENTS" />
+    <!--联运SDK监听网络状态变化，在支付登录过程中做一些异常处理-->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!--允许程序访问Wi-Fi网络状态信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许程序打开网络套接字-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许程序访问有关GSM网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--判断游戏是否是在主进程初始化，避免初始化进程错误导致功能不可用-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!--获取安装权限，更新安装vivo服务安全插件apk-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!--android11及以上必须添加此权限才能获取vivo服务安全插件安装包的状态-->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+</manifest>

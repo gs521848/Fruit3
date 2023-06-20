@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "228810574335",
+    "project_id": "scary-fruit-lemons",
+    "storage_bucket": "scary-fruit-lemons.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228810574335:android:e4f2ca03227a239a387fca",
+        "android_client_info": {
+          "package_name": "com.lemons.tomatos.scary.fruits"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "228810574335-tr0vn3ghkj6fuimh73hk08qn2th9bh8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCg0-MKZ7sLyRGnS81aCQxtVCudsit6gr8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "228810574335-tr0vn3ghkj6fuimh73hk08qn2th9bh8v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

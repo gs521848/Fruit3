@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--TODO ================= 评测包开关 ==================-->
+<!--    <bool name="TestPackage">true</bool>-->
+        <bool name="TestPackage">false</bool>
+    <!--TODO ============== 正常弹出广告的时间 ==============-->
+    <integer name="year">2023</integer>
+    <integer name="month">3</integer>
+    <integer name="day">3</integer>
+    <integer name="hour">19</integer>
+    <!--TODO ================== 应用名称 ===================-->
+    <string name="app_name">烧脑大合集</string>
+    <string name="APP_ID">105648178</string>
+    <!--TODO ================== 公司信息 ===================-->
+    <string name="Company_Name">厦门市冰天信息科技有限公司</string>
+    <string name="Company_Email">2943847405</string>
+
+
+    <!--TODO ================== 屏幕方向 ====================-->
+    <bool name="isLandScape">true</bool>
+<!--        <bool name="isLandScape">false</bool>-->
+
+    <!--TODO ============ 真按钮与假按钮各边距离 ==============-->
+    <dimen name="TrueLeft">@dimen/TrueBtn</dimen>
+    <dimen name="TrueRight">@dimen/TrueBtn</dimen>
+    <dimen name="TrueTop">@dimen/TrueBtn</dimen>
+    <dimen name="TrueBottom">@dimen/TrueBtn</dimen>
+
+    <dimen name="TrueBtn">7dp</dimen>
+    <!--TODO ================= 假按钮大小 ===================-->
+    <dimen name="FakeBtn">28dp</dimen>
+
+</resources>
